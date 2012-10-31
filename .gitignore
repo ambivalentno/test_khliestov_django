@@ -1,4 +1,5 @@
 *.log
 *.pot
 *.pyc
+*.git
 local_settings.py
