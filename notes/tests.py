@@ -20,6 +20,7 @@ class MyTests(WebTest):
         assert note.title in index_page
         assert note.text in index.page
 
+    
     def test_that_admin_works(self):
         login_page = self.app.get('/admin')
         form = login_page.form
