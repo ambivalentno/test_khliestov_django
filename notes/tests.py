@@ -18,7 +18,7 @@ class MyTests(WebTest):
         index_page = self.app.get('/')
         self.assertTemplateUsed(index_page, template_name='index.html')
         assert note.title in index_page
-        assert note.text in index.page
+        assert note.text in index_page
 
     
     def test_that_admin_works(self):
