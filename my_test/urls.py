@@ -1,3 +1,4 @@
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls import patterns, include, url
 
 # Uncomment the next two lines to enable the admin:
@@ -14,5 +15,8 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^add_note/', 'notes.views.add_note'),
+    url(r'^count/', 'notes.views.count'),
     url(r'^$', 'notes.views.index'),
 )
+urlpatterns += staticfiles_urlpatterns()
