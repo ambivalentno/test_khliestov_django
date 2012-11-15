@@ -1,25 +1,28 @@
-from django.forms.widgets import TextInput, Textarea, MultiWidget
+from django.forms.widgets import Textarea
 from django.utils.safestring import mark_safe
 from django.forms.util import flatatt
-from django.utils.html import conditional_escape
-from django.utils.encoding import force_unicode
-from django import forms
 
-class MultiCount(MultiWidget):
+
+class NewTextarea(Textarea):
     class Media:
-        js = ('test.js',)
+        js = ('test.js','jquery.js',)
 
-    def __init__(self, name=None, text_area_attrs={}, input_attrs={'disabled':'disabled'}):
-        input_name = "id_text" + name +"_0"
-        output_name = "id_text" + name +"_1"
-        text_area_attrs['onclick'] = "somef('"+input_name+"','"+output_name+"')"
-        self.widgets = (Textarea(attrs=text_area_attrs), TextInput(attrs=input_attrs))   
-        super(MultiCount,self).__init__(self.widgets)
+    def __init__(self, attrs=None):
+        default_attrs = {'name': 'default_name', 'id': 'default_id'}
+        if attrs:
+            default_attrs.update(attrs)
 
-    def decompress(self, values):
-        if values:
-            return values
-        return [None, None]
+        default_attrs['onclick'] = "somef('" + default_attrs['id'] + \
+            "','output_" + default_attrs['id'] + "')"
+        super(NewTextarea, self).__init__(attrs=default_attrs)
 
-
-
+    def render(self, name, value, attrs=None):
+        if value is None:
+            value = ''
+        final_attrs = self.build_attrs(attrs, name='text')
+        base_html = super(NewTextarea, self).render(name, value,
+         attrs=final_attrs)
+        output_id = u' id=output_' + final_attrs['id']
+        counter = u'<p%s></p>' % output_id
+        all_html = base_html + counter
+        return mark_safe(all_html)
