@@ -90,7 +90,7 @@ class MyTests(WebTest):
         assert 'notes number=2' in page
 
     def test_ajax(self):
-        #'csrf_checks = False ' in the beginning was included because 
+        #'csrf_checks = False ' in the beginning was included because
         #I don't feel like manually providing csrf here is a right way to go.
         ajax_header = {'X_REQUESTED_WITH': 'XMLHttpRequest'}
         title = ['test']
@@ -121,7 +121,7 @@ class MyTests(WebTest):
         form = add_page_resp.form
         assert form['title'].value == 'test'
         assert form['text'].value == 'test_test_test'
-        im =Image.new('RGB',(100,50))
+        im = Image.new('RGB', (100, 50))
         im.save('someimage.png', format='PNG')
         upfile = [('image', 'someimage.png')]
         new_add_resp = self.app.post('/add_note/', post_content,
@@ -146,7 +146,7 @@ class MyTests(WebTest):
          upload_files=upfile)
         assert u'not an image or a corrupted image' in ajax_resp
         #good part
-        im =Image.new('RGB',(100,50))
+        im = Image.new('RGB', (100, 50))
         im.save('someimage.png', format='PNG')
         upfile = [('image', 'someimage.png')]
         post_args = {'title': title, 'text': text, 'form_name': ['add_note']}
@@ -169,7 +169,7 @@ class SeleniumTests(LiveServerTestCase):
         # pass
         self.browser.quit()
 
-#disabled as I don't have internet acccess, and I don't want neither 
+#disabled as I don't have internet acccess, and I don't want neither
 #download twitter over edge, nor edit templates to make them even uglier
 #than tey are now
     def test_sel_ajax(self):
@@ -180,7 +180,7 @@ class SeleniumTests(LiveServerTestCase):
         text_field = self.browser.find_element_by_name('text')
         text_field.send_keys('text')
         submit_button = self.browser.find_element_by_name('Submit')
-        submit_button.click()        
+        submit_button.click()
         body = self.browser.find_element_by_tag_name('body')
         assert 'Ensure this value has at least' in body.text
         #input of valid data
@@ -192,19 +192,19 @@ class SeleniumTests(LiveServerTestCase):
         submit_button.click()
         body = self.browser.find_element_by_tag_name('body')
         assert 'Your message was sent. You can add a new one now.' in body.text
-    
+
     def test_sel_ajax_image_upload(self):
         add_page = self.browser.get(self.live_server_url + '/add_note')
         title_field = self.browser.find_element_by_name('title')
         text_field = self.browser.find_element_by_name('text')
         title_field.send_keys('title')
         text_field.send_keys('text_text_text')
-        im =Image.new('RGB',(100,50))
+        im = Image.new('RGB', (100, 50))
         im.save('simage.png', format='PNG')
         image_field = self.browser.find_element_by_name("image")
-        image_field.send_keys(getcwd()+"/simage.png")
+        image_field.send_keys(getcwd() + "/simage.png")
         submit_button = self.browser.find_element_by_name('Submit')
-        submit_button.click()        
+        submit_button.click()
         page = self.browser.get(self.live_server_url + '/')
         img = self.browser.find_element_by_tag_name('img')
         img_src = img.get_attribute('src')
