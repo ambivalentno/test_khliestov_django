@@ -156,6 +156,7 @@ class MyTests(WebTest):
         assert u'test_test_test' in self.app.get('/')
         remove('someimage.png')
         remove('file.txt')
+        remove('media/images/someimage.png')
 
 
 class SeleniumTests(LiveServerTestCase):
@@ -165,8 +166,8 @@ class SeleniumTests(LiveServerTestCase):
         self.browser.implicitly_wait(3)
 
     def tearDown(self):
-        pass
-        # self.browser.quit()
+        # pass
+        self.browser.quit()
 
 #disabled as I don't have internet acccess, and I don't want neither 
 #download twitter over edge, nor edit templates to make them even uglier
