@@ -19,8 +19,10 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     url(r'^add_note/', 'notes.views.add_note'),
+    url(r'^random_note/', 'notes.views.random_note'),
     url(r'^count/', 'notes.views.count'),
     url(r'^$', 'notes.views.index'),
+    url(r'^emb_widg/', 'notes.views.test_embeddable_widget'),
 )
 urlpatterns += staticfiles_urlpatterns()
 

@@ -165,8 +165,8 @@ class SeleniumTests(LiveServerTestCase):
         self.browser.implicitly_wait(3)
 
     def tearDown(self):
-        #pass
-        self.browser.quit()
+        pass
+        # self.browser.quit()
 
 #disabled as I don't have internet acccess, and I don't want neither 
 #download twitter over edge, nor edit templates to make them even uglier
@@ -209,6 +209,19 @@ class SeleniumTests(LiveServerTestCase):
         img_src = img.get_attribute('src')
         assert 'simage.png' in img_src
         remove('simage.png')
+        remove('media/images/simage.png')
+
+    def test_emddable_widget(self):
+        note = Note(title='sometitle1', text='sometext1')
+        note.save()
+        # rand_page = self.browser.get(self.live_server_url + '/random_note')
+        # assert note.title in self.browser.page_source
+        widg_page = self.browser.get(self.live_server_url + '/emb_widg')
+        self.browser.implicitly_wait(30)
+        # self.browser.execute_script("$('#container').load('"+self.live_server_url+"/random_note/');")
+        body = self.browser.find_element_by_tag_name('body').text
+        assert note.title in body
+        assert note.text in body
 
 
 #     I wasn't able to find solid and simple solution to test javascript
