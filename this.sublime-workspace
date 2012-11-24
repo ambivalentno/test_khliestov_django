@@ -4,12 +4,64 @@
 		"selected_items":
 		[
 			[
-				"edit",
-				"edit_note_page"
+				"text",
+				"textinput"
+			],
+			[
+				"im",
+				"image_field"
+			],
+			[
+				"uplo",
+				"upload_files"
+			],
+			[
+				"aja",
+				"ajax_header"
+			],
+			[
+				"new",
+				"new_add_resp"
+			],
+			[
+				"add",
+				"add_page_resp"
+			],
+			[
+				"re",
+				"request"
 			],
 			[
 				"Note",
-				"NoteAdmin"
+				"NoteForm"
+			],
+			[
+				"New",
+				"NewNoteForm"
+			],
+			[
+				"upload",
+				"upload_fields"
+			],
+			[
+				"image",
+				"image_place"
+			],
+			[
+				"F",
+				"FILES"
+			],
+			[
+				"post",
+				"post_args"
+			],
+			[
+				"all",
+				"all_notes"
+			],
+			[
+				"edit",
+				"edit_note_page"
 			],
 			[
 				"Model",
@@ -18,10 +70,6 @@
 			[
 				"u",
 				"utfc	coding: utf-8"
-			],
-			[
-				"re",
-				"render"
 			],
 			[
 				"PO",
@@ -70,10 +118,6 @@
 			[
 				"mtd",
 				"method"
-			],
-			[
-				"add",
-				"add_page"
 			],
 			[
 				"asser",
@@ -224,20 +268,12 @@
 				"question_field"
 			],
 			[
-				"new",
-				"new_poll_link"
-			],
-			[
 				"as",
 				"assertIn"
 			],
 			[
 				"P",
 				"Poll"
-			],
-			[
-				"all",
-				"all_polls_in_database"
 			],
 			[
 				"pas",
@@ -427,23 +463,15 @@
 			"file": "notes/tests.py",
 			"settings":
 			{
-				"buffer_size": 4072,
+				"buffer_size": 9354,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "my_test/settings.py",
+			"file": "notes/views.py",
 			"settings":
 			{
-				"buffer_size": 5668,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "notes/custom_template_context_processor.py",
-			"settings":
-			{
-				"buffer_size": 94,
+				"buffer_size": 1034,
 				"line_ending": "Unix"
 			}
 		},
@@ -451,15 +479,26 @@
 			"file": "notes/templates/add_note.html",
 			"settings":
 			{
-				"buffer_size": 277,
+				"buffer_size": 593,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "notes/templates/index.html",
+			"contents": "\nfunction somef(inputa,outputa){\n    var $textarea = $(\"#\"+inputa);\n    var $chars = $(\"#\"+outputa);\n\n    $textarea.keyup(function(){\n        $chars.html((parseInt($textarea.val().length)));\n    });\n    $textarea.keydown(function(){\n        $chars.html((parseInt($textarea.val().length)));\n    });\n}\n\n",
+			"file": "notes/static/test.js",
+			"file_size": 450,
+			"file_write_time": 1353717996000000,
 			"settings":
 			{
-				"buffer_size": 424,
+				"buffer_size": 301,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "notes/static/adding.js",
+			"settings":
+			{
+				"buffer_size": 153,
 				"line_ending": "Unix"
 			}
 		}
@@ -504,41 +543,55 @@
 	},
 	"file_history":
 	[
-		"/home/nikita/python/frames/django/test_khliestov_django/notes/forms.py",
-		"/home/nikita/python/frames/django/test_khliestov_django/notes/views.py",
-		"/home/nikita/python/frames/django/test_khliestov_django/notes/templates/count.html",
-		"/home/nikita/python/frames/django/venv/lib/python2.7/site-packages/django/core/context_processors.py",
+		"/home/nikita/python/frames/django/test_khliestov_django/my_test/urls.py",
 		"/home/nikita/python/frames/django/test_khliestov_django/notes/widgets.py",
-		"/home/nikita/python/frames/django/test_khliestov_django/notes/admin.py",
+		"/home/nikita/python/frames/django/test_khliestov_django/notes/templates/index.html",
 		"/home/nikita/python/frames/django/test_khliestov_django/notes/models.py",
+		"/home/nikita/python/frames/django/test_khliestov_django/notes/forms.py",
+		"/home/nikita/python/frames/django/test_khliestov_django/notes/templates/base.html",
+		"/home/nikita/python/frames/django/test_khliestov_django/notes/templates/show_note.html",
+		"/home/nikita/python/frames/django/tdd_tut/mysite/fts/tests.py",
+		"/home/nikita/python/frames/django/test_khliestov_django/notes/templatetags/show_note.py",
+		"/home/nikita/python/frames/django/test_khliestov_django/notes/admin.py",
+		"/home/nikita/python/frames/django/venv/lib/python2.7/site-packages/django/forms/models.py",
+		"/home/nikita/python/frames/django/venv/lib/python2.7/site-packages/django/forms/forms.py",
+		"/home/nikita/python/frames/django/test_khliestov_django/my_test/settings.py",
+		"/home/nikita/python/frames/django/test_khliestov_django/notes/templates/add_note.html",
+		"/home/nikita/python/frames/django/forms_freaky_NewNoteForm.py",
+		"/home/nikita/python/frames/django/venv/lib/python2.7/site-packages/django/forms/__init__.py",
+		"/home/nikita/python/frames/django/test_khliestov_django/notes/templates/count.html",
+		"/home/nikita/python/frames/django/test_khliestov_django/notes/static/adding.js",
+		"/home/nikita/python/frames/django/test_khliestov_django/notes/templates/ajax_success.html",
+		"/home/nikita/python/frames/django/test_khliestov_django/notes/templates/ajax_fail.html",
+		"/home/nikita/python/frames/django/venv/lib/python2.7/site-packages/django/http/__init__.py",
+		"/home/nikita/python/frames/django/test_khliestov_django/notes/static/test.js",
+		"/home/nikita/python/frames/flask/mngkit/eduall/teach/templates/edit_unit.html",
+		"/home/nikita/python/frames/django/test_khliestov_django/notes/static/jquery.js",
+		"/home/nikita/python/frames/django/test_khliestov_django/notes/custom_template_context_processor.py",
+		"/home/nikita/python/frames/django/Tuter/templates/admin/base_site.html",
+		"/home/nikita/python/frames/django/Tuter/templates/polls/index.html",
+		"/home/nikita/python/frames/django/Tuter/templates/admin/index.html",
+		"/home/nikita/python/frames/django/test_khliestov_django/notes/views.py",
+		"/home/nikita/python/frames/django/venv/lib/python2.7/site-packages/django/core/context_processors.py",
 		"/home/nikita/python/frames/django/venv/lib/python2.7/site-packages/django/shortcuts/__init__.py",
 		"/home/nikita/python/frames/django/venv/lib/python2.7/site-packages/django/utils/functional.py",
-		"/home/nikita/python/frames/django/test_khliestov_django/notes/templatetags/show_note.py",
 		"/home/nikita/python/frames/django/venv/lib/python2.7/site-packages/django/forms/widgets.py",
 		"/home/nikita/python/frames/django/myfirst/my_test/notes/templates/count.html",
-		"/home/nikita/python/frames/django/test_khliestov_django/notes/static/test.js",
 		"/home/nikita/python/frames/django/tdd_tut/mysite/polls/templates/home.html",
 		"/home/nikita/python/frames/django/tdd_tut/mysite/polls/templates/poll.html",
-		"/home/nikita/python/frames/django/venv/lib/python2.7/site-packages/django/forms/forms.py",
 		"/home/nikita/python/frames/django/venv/lib/python2.7/site-packages/django/forms/util.py",
-		"/home/nikita/python/frames/django/test_khliestov_django/notes/templates/add_note.html",
 		"/home/nikita/python/frames/flask/mngkit/eduall/templates/edit_unit.html",
-		"/home/nikita/python/frames/django/test_khliestov_django/my_test/urls.py",
 		"/home/nikita/python/frames/django/myfirst/my_test/notes/views.py",
 		"/home/nikita/python/frames/flask/mngkit/eduall/templates/add_interaction.html",
 		"/home/nikita/python/frames/flask/mngkit/eduall/templates/add_unit.html",
 		"/home/nikita/python/frames/flask/mngkit/eduall/templates/edit_interaction.html",
 		"/home/nikita/python/frames/flask/mngkit/eduall/templates/layout.html",
-		"/home/nikita/python/frames/django/test_khliestov_django/my_test/settings.py",
 		"/home/nikita/python/frames/django/myfirst/my_test/itests/tests.py",
-		"/home/nikita/python/frames/django/tdd_tut/mysite/fts/tests.py",
 		"/home/nikita/python/frames/django/tdd_tut/mysite/polls/views.py",
 		"/home/nikita/untitled.py",
 		"/home/nikita/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 		"/home/nikita/.config/sublime-text-2/Packages/User/JSON.sublime-settings",
 		"/home/nikita/python/frames/django/tdd_tut/mysite/polls/models.py",
-		"/home/nikita/python/frames/django/test_khliestov_django/notes/templates/index.html",
-		"/home/nikita/python/frames/django/test_khliestov_django/notes/templates/show_note.html",
 		"/home/nikita/python/frames/django/myfirst/my_test/my_test/settings.py",
 		"/home/nikita/python/frames/django/myfirst/my_test/notes/templates/index.html",
 		"/home/nikita/python/frames/django/myfirst/my_test/notes/admin.py",
@@ -617,21 +670,7 @@
 		"/home/nikita/web_projects/first/application/controllers/admin.php",
 		"/home/nikita/web_projects/first/admin/views/price_admin.php",
 		"/home/nikita/web_projects/first/application/views/admin.php",
-		"/home/nikita/web_projects/first/admin/.htaccess",
-		"/home/nikita/web_projects/first/application/.htaccess",
-		"/home/nikita/web_projects/bvinno.com.local/application/config/routes.php",
-		"/home/nikita/web_projects/first/application/helpers/generic_helper.php",
-		"/home/nikita/web_projects/first/application/controllers/login.php",
-		"/home/nikita/web_projects/first/application/views/login.php",
-		"/home/nikita/web_projects/first/application/views/price_admin.php",
-		"/home/nikita/Download/template.php",
-		"/home/nikita/web_projects/first/application/views/price.php",
-		"/home/nikita/web_projects/first/application/views/add_price.php",
-		"/home/nikita/web_projects/first/application/views/prices_admin.php",
-		"/home/nikita/web_projects/first/prices.php",
-		"/home/nikita/web_projects/first/.htaccess",
-		"/home/nikita/web_projects/first/application/controllers/prices/news_admin.php",
-		"/home/nikita/web_projects/first/application/views/add_news.php"
+		"/home/nikita/web_projects/first/admin/.htaccess"
 	],
 	"find":
 	{
@@ -651,6 +690,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"cleaned",
+			"is_bou",
+			"ModelFor",
+			"STATIC",
+			"image",
+			"class ModelForm",
+			"ModelF",
+			"print",
+			"password",
+			"username",
+			"is_a",
+			"jQuery",
 			"condi",
 			"forms",
 			".id",
@@ -766,19 +817,7 @@
 			"regions",
 			"add_re",
 			"first_name",
-			"lesson",
-			"course",
-			"lesson",
-			"course",
-			"lesson",
-			"edit_",
-			"edit_cou",
-			"print",
-			"unit",
-			"course",
-			"user_id",
-			"comment",
-			"add_le"
+			"lesson"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -804,7 +843,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -812,15 +851,15 @@
 					"file": "notes/tests.py",
 					"settings":
 					{
-						"buffer_size": 4072,
+						"buffer_size": 9354,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3003,
-								3003
+								8368,
+								8368
 							]
 						],
 						"settings":
@@ -830,25 +869,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1114.0,
+						"translation.y": 3196.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "my_test/settings.py",
+					"file": "notes/views.py",
 					"settings":
 					{
-						"buffer_size": 5668,
+						"buffer_size": 1034,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1150,
-								1150
+								449,
+								449
 							]
 						],
 						"settings":
@@ -865,23 +904,25 @@
 				},
 				{
 					"buffer": 2,
-					"file": "notes/custom_template_context_processor.py",
+					"file": "notes/templates/add_note.html",
 					"settings":
 					{
-						"buffer_size": 94,
+						"buffer_size": 593,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								92,
-								92
+								93,
+								93
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -891,23 +932,23 @@
 				},
 				{
 					"buffer": 3,
-					"file": "notes/templates/add_note.html",
+					"file": "notes/static/test.js",
 					"settings":
 					{
-						"buffer_size": 277,
+						"buffer_size": 301,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								275,
-								275
+								301,
+								301
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -917,23 +958,25 @@
 				},
 				{
 					"buffer": 4,
-					"file": "notes/templates/index.html",
+					"file": "notes/static/adding.js",
 					"settings":
 					{
-						"buffer_size": 424,
+						"buffer_size": 153,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								413,
-								413
+								153,
+								153
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
