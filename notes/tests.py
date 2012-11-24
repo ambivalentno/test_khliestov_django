@@ -154,6 +154,8 @@ class MyTests(WebTest):
          upload_files=upfile)
         assert u'Your message was sent. You can add a new one now.' in ajax_resp
         assert u'test_test_test' in self.app.get('/')
+        remove('someimage.png')
+        remove('file.txt')
 
 
 class SeleniumTests(LiveServerTestCase):
@@ -206,6 +208,7 @@ class SeleniumTests(LiveServerTestCase):
         img = self.browser.find_element_by_tag_name('img')
         img_src = img.get_attribute('src')
         assert 'simage.png' in img_src
+        remove('simage.png')
 
 
 #     I wasn't able to find solid and simple solution to test javascript
