@@ -1,0 +1,6 @@
+Django-1.4.2
+webtest-1.4.0
+django-webtest-1.5.4
+PIL
+South
+selenium
