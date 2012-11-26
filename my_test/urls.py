@@ -17,12 +17,12 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^add_note/', 'notes.views.add_note'),
-    url(r'^random_note/', 'notes.views.random_note'),
-    url(r'^count/', 'notes.views.count'),
-    url(r'^$', 'notes.views.index'),
-    url(r'^emb_widg/', 'notes.views.test_embeddable_widget'),
+    url(r'^admin/', include(admin.site.urls), name="admin"),
+    url(r'^add_note/', 'notes.views.add_note', name="add_note"),
+    url(r'^random_note/', 'notes.views.random_note', name="random_note"),
+    url(r'^count/', 'notes.views.count', name="count"),
+    url(r'^$', 'notes.views.index', name="index"),
+    url(r'^emb_widg/', 'notes.views.test_embeddable_widget', name="emb_widg"),
 )
 urlpatterns += staticfiles_urlpatterns()
 

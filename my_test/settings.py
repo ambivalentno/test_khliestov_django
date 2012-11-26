@@ -1,4 +1,5 @@
 # Django settings for my_test project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -56,7 +57,8 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = '/home/nikita/python/frames/django/test_khliestov_django/media/'
+SITE_ROOT = os.getcwd()
+MEDIA_ROOT = os.path.join(SITE_ROOT, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
