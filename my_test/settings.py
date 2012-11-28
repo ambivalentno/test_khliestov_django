@@ -29,7 +29,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.static",
     "django.core.context_processors.tz",
     "django.contrib.messages.context_processors.messages",
-    "notes.custom_template_context_processor.default"
+    "my_test.apps.notes.custom_template_context_processor.default"
     )
 
 # Local time zone for this installation. Choices can be found here:
@@ -132,7 +132,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'notes',
+    'my_test.apps.notes',
     'south'
 )
 
