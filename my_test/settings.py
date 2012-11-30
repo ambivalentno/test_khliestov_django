@@ -1,5 +1,9 @@
 # Django settings for my_test project.
 import os
+import sys
+
+PROJECT_ROOT = os.path.dirname(__file__)
+sys.path.insert(0, os.path.join(PROJECT_ROOT, 'apps'))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -29,7 +33,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.static",
     "django.core.context_processors.tz",
     "django.contrib.messages.context_processors.messages",
-    "my_test.apps.notes.custom_template_context_processor.default"
+    "notes.custom_template_context_processor.default"
     )
 
 # Local time zone for this installation. Choices can be found here:
@@ -132,7 +136,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'my_test.apps.notes',
+    'notes',
     'south'
 )
 
