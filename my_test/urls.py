@@ -18,11 +18,12 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls), name="admin"),
-    url(r'^add_note/', 'my_test.apps.notes.views.add_note', name="add_note"),
-    url(r'^random_note/', 'my_test.apps.notes.views.random_note', name="random_note"),
-    url(r'^count/', 'my_test.apps.notes.views.count', name="count"),
-    url(r'^$', 'my_test.apps.notes.views.index', name="index"),
-    url(r'^emb_widg/', 'my_test.apps.notes.views.test_embeddable_widget', name="emb_widg"),
+    url(r'^add_note/', 'notes.views.add_note', name="add_note"),
+    url(r'^random_note/', 'notes.views.random_note', name="random_note"),
+    url(r'^count/', 'notes.views.count', name="count"),
+    url(r'^$', 'notes.views.index', name="index"),
+    url(r'^emb_widg/', 'notes.views.test_embeddable_widget', name="emb_widg"),
+    url(r'^embed_widget.js', 'notes.views.serve_embed_widget', name="serve_widg"),
 )
 urlpatterns += staticfiles_urlpatterns()
 
